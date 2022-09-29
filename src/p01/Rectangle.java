@@ -2,7 +2,7 @@ package p01;
 
 import java.util.Objects;
 
-public class Rectangle {
+public class Rectangle implements Geometry {
 	private int breite;
 	private int hoehe;
 	
@@ -50,6 +50,16 @@ public class Rectangle {
 		
 		Rectangle other = (Rectangle) obj;
 		return this.breite == other.getBreite() && this.hoehe == other.getHoehe();
+	}
+
+	@Override
+	public double berechneUmfang() {
+		return 2 * (this.breite + this.hoehe);
+	}
+
+	@Override
+	public double berechneFlaeche() {
+		return this.breite * this.hoehe;
 	}
 	
 	
