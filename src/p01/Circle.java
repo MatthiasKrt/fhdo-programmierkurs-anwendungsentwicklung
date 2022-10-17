@@ -1,5 +1,7 @@
 package p01;
 
+import p01.Geometry;
+
 public class Circle implements Geometry {
 	private int radius;
 	
