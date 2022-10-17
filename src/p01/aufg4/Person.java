@@ -54,7 +54,7 @@ public class Person {
 			return false;
 		
 		Person other = (Person) obj;
-		return name.equals(other.getName()) && city.equals(other.getCity());
+		return name.equals(other.getName()) && city.equals(other.getCity()) && street.equals(other.getStreet()) && zipcode.equals(other.getZipcode());
 	}
 	
 	
