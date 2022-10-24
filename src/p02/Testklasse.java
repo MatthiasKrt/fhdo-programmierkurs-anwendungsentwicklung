@@ -11,6 +11,14 @@ public class Testklasse {
 	private static Nahrungsmittel k2 = new Kaese("K2", 1.5f);
 	private static Nahrungsmittel k3 = new Kaese("K3", 12.2f);
 	
+	private static Nahrungsmittel fk1 = new Frischkaese("FK1", 3);
+	private static Nahrungsmittel fk2 = new Frischkaese("FK2", 1.4f);
+	private static Nahrungsmittel fk3 = new Frischkaese("FK3", 4.4f);
+	
+	private static Nahrungsmittel sfk1 = new Superfrischkaese("SFK1", 1);
+	private static Nahrungsmittel sfk2 = new Superfrischkaese("SFK2", 1);
+	private static Nahrungsmittel sfk3 = new Superfrischkaese("SFK3", 1);
+	
 	private static Nahrungsmittel w1 = new Wurst("W1", 1);
 	private static Nahrungsmittel w2 = new Wurst("W2", 4);
 	private static Nahrungsmittel w3 = new Wurst("W3", 7.1f);
@@ -24,7 +32,7 @@ public class Testklasse {
 		
 		Scanner s = new Scanner(System.in);
 		int eingabe = 0;
-		Nahrungsmittel[] produkte = {k1, k2, k3, w1, w2, w3, b1, b2, b3};
+		Nahrungsmittel[] produkte = {k1, k2, k3, w1, w2, w3, b1, b2, b3, fk1, fk2, fk3, sfk1, sfk2, sfk3};
 		
 		do {
 			System.out.println("Produktnummer eingeben:");
@@ -54,6 +62,12 @@ public class Testklasse {
 					} else if(eingabe <= 9) {
 						Brot b = (Brot) selected;
 						einkaufswagenBrot.hinzufuegen(b);
+					} else if(eingabe <= 12) {
+						Kaese k = (Frischkaese) selected;
+						einkaufswagenKaese.hinzufuegen(k);
+					} else if(eingabe <= 15) {
+						Kaese k = (Superfrischkaese) selected;
+						einkaufswagenKaese.hinzufuegen(k);
 					}
 				} else if(addEingabe == 2) {
 					System.out.println("Welche Menge soll hinzugefügt werden?");
